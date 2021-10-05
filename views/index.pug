@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    each todo in todos
+      li.listItem(class=todo.complete ? "complete" : "")
+       | Task: #{todo.task}
+       | Completed: #{todo.complete}
+
+       
+    else
+      p No Todos Found
